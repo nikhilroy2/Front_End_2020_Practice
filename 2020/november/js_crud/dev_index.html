@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css' />
+</head>
+
+<body>
+    <div class="container p-5">
+        <div class="form-group">
+            <input type="text" class="form-control" name="" id="typeText" aria-describedby="helpId"
+                placeholder="Enter website name">
+        </div>
+
+        <table class="table shadow-sm rounded-lg table-borderless ">
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const $ = nikhil => document.querySelector(nikhil);
+        $('#typeText').onkeypress = textPress;
+        let data_row = 0;
+        function textPress() {
+            if (event.key === 'Enter') {
+                data_row++;
+                let self_value = this.value
+                if (!this.hasAttribute('data-update')) {
+                    $('tbody').innerHTML +=
+                        `
+                <tr data-row="${data_row}">
+                    <td><span class="text">${self_value}</span> <span onclick="Delete(this)" class="delete float-right btn btn-primary badge mx-2">delete</span> <span onclick="Update(this)"  class="update float-right btn btn-primary badge mx-2">Update</span>  </td>
+                </tr>
+                `;
+                }
+                let update_attr = this.getAttribute('data-update');
+                //console.log(update_attr);
+                if (this.hasAttribute('data-update')) {
+                    $(`[data-row='${this.getAttribute('data-update')}'] td .text`).textContent = self_value;
+                    this.removeAttribute('data-update');
+                }
+                this.value = '';
+            }
+        }
+        function Update(val) {
+            let updateText = val.parentElement;
+            $('#typeText').value = updateText.children[0].textContent;
+            $('#typeText').setAttribute('data-update', updateText.parentElement.getAttribute('data-row'))
+        }
+
+        function Delete(val){
+            val.parentElement.parentElement.remove();
+        }
+
+    </script>
+
+    
+</body>
+
+</html>
