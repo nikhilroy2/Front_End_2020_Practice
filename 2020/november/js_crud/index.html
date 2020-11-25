@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css'/>
+</head>
+<body>
+    <div class="container p-5">
+            <div class="form-group">
+                <input type="text"  class="form-control" on name="" id="textInput" aria-describedby="helpId" placeholder="Enter Name">
+              </div>
+        <ul class="list-group">
+        </ul>
+    </div>
+
+    <script>
+        const $ = (select) => document.querySelector(select);
+        $('#textInput').onkeypress = textInput;
+
+        let id = 0;
+        function textInput(e){
+            if(e.key === "Enter" && this.value !== ''){
+                id++;
+                let list_group = $('.list-group');
+                list_group.innerHTML += `<li class="list-group-item" data-id="${id}"> <span class="text"> ${this.value} </span> <span class="badge btn btn-primary float-right mx-2">Edit</span>  <span onclick="EditText(this)" class="badge btn btn-primary float-right ">Delete</span> </li>`
+
+
+                // remove the input field text;
+                this.value = '';
+            }
+        }
+
+        function EditText(val){
+            let parent = val.parentElement;
+            parent.remove();
+            console.log(parent)
+        }
+
+    </script>
+</body>
+</html>
