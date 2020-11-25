@@ -10,4 +10,6 @@
 <li> SCSS </li>
 <li> JS LIBRARY  </li>
 </ul>
-####This repository reserve by Nikhil Roy local computer and for security he will push any update of his local computer here.
+<i>
+This repository reserve by Nikhil Roy local computer and for security he will push any update of his local computer here.
+</i>
