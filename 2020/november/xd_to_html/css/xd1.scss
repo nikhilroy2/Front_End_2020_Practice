@@ -1,0 +1,121 @@
+
+// ........ Variable....
+$h1: 37px;
+$h2: 30px;
+$h3: 26px;
+$main_bg: #FF6C00;
+$main_bg_50: #FEF2F2;
+// ................
+
+//............... Mixin ......
+@mixin mp-0{
+    margin: 0;
+    padding: 0;
+}
+@mixin bo-0{
+    border: none;
+    outline: none;
+}
+
+// .............. 
+
+.wrapper{
+    margin: auto;
+ .wrapper_head{
+     text-align: center;
+     margin-bottom: 2rem;
+     .icon{
+        display: flex;
+        padding: 0 3rem;
+        align-items: center;
+        svg{
+            width: 150px;
+            height: 150px;
+            margin-left: auto;
+        }
+        button{
+            margin-left: auto;
+            @include bo-0;
+            font-size: $h2;
+            background: transparent;
+            cursor: pointer;
+        }
+     }
+     #profile_text{
+         margin-right: 20px;
+         font-size: $h1;
+     }
+ }
+ .wrapper_content{
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
+     .card{
+         width: 421px;
+         height: 504px;
+         overflow: hidden;
+         margin: 1rem;
+         box-shadow: rgba(0, 0, 0, 0.178) 0 10px 15px;
+         position: relative;
+         .card_fancy{
+             position: relative;
+             #fancy_top_right{
+                 position: absolute;
+                 top: -16px;
+                 right: -24px;
+             }
+         }
+         .card_head{
+             text-align: center;
+             margin-top: -25px;
+             margin-bottom: 5px;
+         }
+         .card_body{
+             text-align: center;
+             h3{
+                 font-size: $h3;
+                 background: $main_bg;
+                 margin:0;
+                 padding: 1rem;
+                 color: #fff;
+                }
+                p{
+                    padding: 1rem;
+                    margin: 0;
+             }
+             .btn_attached{
+                 display: inline-block;
+                 width: 173.34px;
+                 height: 34.04px;
+                 svg{
+                     vertical-align: middle;
+                     
+                 }
+                 @include bo-0;
+                     background: #EDEEF2;
+                     border-radius: 25px;
+                     box-shadow: #FFFFFF -13px -13px 20px;
+                     font-size: 17px;
+                     cursor: pointer;
+
+
+             }
+         }
+         .card_footer{
+             text-align: center;
+             background: $main_bg_50;
+             padding: 1rem .5rem;
+             position: absolute;
+             width: 100%;
+             bottom: 25px;
+             left: 0;
+             h5{
+                 color: #646363;
+                 font-size: 16px;
+                 margin: 0;
+             }
+
+         }
+     }
+ }   
+}

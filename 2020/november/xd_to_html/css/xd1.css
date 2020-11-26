@@ -1,0 +1,129 @@
+.wrapper {
+  margin: auto;
+}
+
+.wrapper .wrapper_head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wrapper .wrapper_head .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .wrapper_head .icon svg {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+}
+
+.wrapper .wrapper_head .icon button {
+  margin-left: auto;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wrapper .wrapper_head #profile_text {
+  margin-right: 20px;
+  font-size: 37px;
+}
+
+.wrapper .wrapper_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .wrapper_content .card {
+  width: 421px;
+  height: 504px;
+  overflow: hidden;
+  margin: 1rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.178) 0 10px 15px;
+          box-shadow: rgba(0, 0, 0, 0.178) 0 10px 15px;
+  position: relative;
+}
+
+.wrapper .wrapper_content .card .card_fancy {
+  position: relative;
+}
+
+.wrapper .wrapper_content .card .card_fancy #fancy_top_right {
+  position: absolute;
+  top: -16px;
+  right: -24px;
+}
+
+.wrapper .wrapper_content .card .card_head {
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 5px;
+}
+
+.wrapper .wrapper_content .card .card_body {
+  text-align: center;
+}
+
+.wrapper .wrapper_content .card .card_body h3 {
+  font-size: 26px;
+  background: #FF6C00;
+  margin: 0;
+  padding: 1rem;
+  color: #fff;
+}
+
+.wrapper .wrapper_content .card .card_body p {
+  padding: 1rem;
+  margin: 0;
+}
+
+.wrapper .wrapper_content .card .card_body .btn_attached {
+  display: inline-block;
+  width: 173.34px;
+  height: 34.04px;
+  border: none;
+  outline: none;
+  background: #EDEEF2;
+  border-radius: 25px;
+  -webkit-box-shadow: #FFFFFF -13px -13px 20px;
+          box-shadow: #FFFFFF -13px -13px 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.wrapper .wrapper_content .card .card_body .btn_attached svg {
+  vertical-align: middle;
+}
+
+.wrapper .wrapper_content .card .card_footer {
+  text-align: center;
+  background: #FEF2F2;
+  padding: 1rem .5rem;
+  position: absolute;
+  width: 100%;
+  bottom: 25px;
+  left: 0;
+}
+
+.wrapper .wrapper_content .card .card_footer h5 {
+  color: #646363;
+  font-size: 16px;
+  margin: 0;
+}
+/*# sourceMappingURL=xd1.css.map */
