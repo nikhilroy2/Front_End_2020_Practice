@@ -1,0 +1,197 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #111324;
+  font-family: sans-serif;
+}
+
+.button_generator_wrapper {
+  width: 900px;
+  margin: auto;
+  min-height: 80vh;
+  background: #ffffff;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.button_generator_wrapper > div {
+  width: 50%;
+}
+
+.button_generator_wrapper > div.control_output_side {
+  width: 49%;
+}
+
+.button_generator_wrapper .control_input_side .form_group {
+  padding-bottom: 1.5rem;
+}
+
+.button_generator_wrapper .control_input_side .form_group > * {
+  display: block;
+}
+
+.button_generator_wrapper .control_input_side .form_group label {
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.button_generator_wrapper .control_input_side .form_group input:not([type="color"]) {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  padding: .7rem .4rem;
+  -webkit-transition: .1s;
+  transition: .1s;
+  border-radius: 3px;
+}
+
+.button_generator_wrapper .control_input_side .form_group input:not([type="color"]):focus {
+  border: 1px solid #32a2ff;
+}
+
+.button_generator_wrapper .control_input_side .form_group input:not([type="color"])::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.button_generator_wrapper .control_input_side .form_group input:not([type="color"]):-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.button_generator_wrapper .control_input_side .form_group input:not([type="color"])::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.button_generator_wrapper .control_input_side .form_group input:not([type="color"])::placeholder {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.button_generator_wrapper .control_input_side .form_group p {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.769);
+  margin-top: .5rem;
+}
+
+.button_generator_wrapper .control_input_side .form_group.form_group_full input:not(.checkbox_allow):not([type="color"]) {
+  width: 100%;
+}
+
+.button_generator_wrapper .control_input_side .form_group_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: relative;
+}
+
+.button_generator_wrapper .control_input_side .form_group_row > div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-right: 1rem;
+}
+
+.button_generator_wrapper .control_input_side .form_group_row input[type=color] {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.button_generator_wrapper .control_input_side .form_group_row input[type=color] ~ input {
+  padding-left: 3.5rem;
+}
+
+.button_generator_wrapper .control_input_side .form_group_row input[type=number], .button_generator_wrapper .control_input_side .form_group_row .w_75 {
+  display: inline-block !important;
+  width: 75% !important;
+}
+
+.button_generator_wrapper .control_input_side .form_group_row input[type=number] ~ span, .button_generator_wrapper .control_input_side .form_group_row .w_75 ~ span {
+  display: inline-block !important;
+  color: rgba(0, 0, 0, 0.769);
+}
+
+.button_generator_wrapper .control_output_side {
+  padding: 0 1.5rem;
+}
+
+.button_generator_wrapper .control_output_side .button_output_wrapper {
+  height: 200px;
+  background: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.button_generator_wrapper .control_output_side .output_code {
+  height: 350px;
+  background: #FBF9E6;
+  margin-top: 1.5rem;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  position: relative;
+}
+
+.button_generator_wrapper .control_output_side .output_code .btn_copy {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #222;
+  padding: .3rem .5rem;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.769);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.769);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.button_generator_wrapper .control_output_side .output_code .btn_copy:active {
+  background: #eee;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.769);
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.769);
+}
+
+.button_generator_wrapper .control_output_side .output_code code {
+  overflow: auto;
+  height: 100%;
+  display: block;
+}
+
+.button_generator_wrapper .control_output_side .output_code code.selection {
+  -webkit-touch-callout: all;
+  /* iOS Safari */
+  -webkit-user-select: all;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: all;
+  /* Firefox */
+  -ms-user-select: all;
+  /* Internet Explorer/Edge */
+  user-select: all;
+  /* Chrome and Opera */
+}
+/*# sourceMappingURL=style.css.map */

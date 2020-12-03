@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="button_generator_wrapper">
+        <div class="control_input_side">
+            <div class="form_group form_group_full">
+                <label for="">Button text</label>
+                <input type="text" data-name="button_text" value="Show me the button!"
+                    placeholder="Show me the button!">
+            </div>
+
+            <div class="form_group form_group_full">
+                <label for="bg_checkbox">
+                    <input checked="true" type="checkbox" class="checkbox_allow"
+                        onclick="checkFun(this, 'background_image')" id="bg_checkbox" name="" id="">
+                    Background image</label>
+                <input type="text" onfocus="InputFocus(this, 'bg_checkbox')" data-name="background_image"
+                    value="https://i.imgur.com/0xPEf.gif" placeholder="https://i.imgur.com/0xPEf.gif"
+                    data-value="https://i.imgur.com/0xPEf.gif">
+                <p>
+                    Host your own image or use a free service like <a href="https://imgur.com/">impor</a> to (use
+                    “Direct Link” URL).
+                </p>
+            </div>
+            <div class="form_group_row">
+                <div class="form_group form_group_full">
+                    <label for="">Background color</label>
+                    <input type="color" onclick="clickColor(this,'background_color')" oninput="bgChange(this,this.nextElementSibling)" name="" value="#556270" id="">
+                    <input type="text" data-name="background_color" class="w_75" value="#556270">
+                </div>
+                <div class="form_group form_group_full">
+                    <label for="">Font color</label>
+                    <input type="color" onclick="clickColor(this,'font_color')" value="#ffffff" oninput="colorChange(this, this.nextElementSibling)" name=""
+                        id="">
+                    <input type="text" data-name="font_color" class="w_75" value="#ffffff">
+                </div>
+            </div>
+            <div class="form_group_row">
+                <div class="form_group form_group_full">
+                    <label for="">Button width</label>
+                    <input type="number" data-name="button_width" value="200">
+                    <span>px</span>
+                </div>
+
+                <div class="form_group form_group_full">
+                    <label for="">Button height</label>
+                    <input type="number" data-name="button_height" value="40">
+                    <span>px</span>
+                </div>
+            </div>
+
+            <div class="form_group_row">
+                <div class="form_group form_group_full">
+                    <label for="border_color"> <input onclick="checkFun(this, 'border_color')" type="checkbox"
+                            class="checkbox_allow" checked="true" id="border_color" name="" id="">Border color</label>
+
+                    <input type="color" name="" onclick="clickColor(this,'border_color')" oninput="borderColor(this, this.nextElementSibling)" value="#1e3650"
+                        id="">
+                    <input type="text" data-name="border_color" class="w_75" value="#1e3650" data-value="#1e3650"
+                        onfocus="InputFocus(this, 'border_color')">
+                </div>
+                <div class="form_group form_group_full">
+                    <label for="border_radius">
+                        <input type="checkbox" onclick="checkFun(this, 'border_radius')" class="checkbox_allow"
+                            checked="true" id="border_radius" name="" id="">Border radius</label>
+
+                    <input type="number" data-name="border_radius" value="4" data-value="4"
+                        onfocus="InputFocus(this, 'border_radius')">
+                    <span>px</span>
+                </div>
+            </div>
+
+            <div class="form_group form_group_full">
+                <label for="">Button URL</label>
+                <input type="text" data-name="button_url" value="http://">
+            </div>
+
+        </div>
+        <div class="control_output_side">
+            <div class="button_output_wrapper">
+
+            </div>
+            <div class="output_code">
+                <code class="selection">
+
+                </code>
+                <button class="btn_copy" onclick="CopyText()"> Copy</button>
+            </div>
+
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

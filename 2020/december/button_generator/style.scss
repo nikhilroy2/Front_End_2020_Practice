@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+$shadow_color: rgba(0, 0, 0, 0.769);
+body{
+    margin: 0;
+    padding: 0;
+    background: #111324;
+    font-family: sans-serif;
+}
+.button_generator_wrapper{
+    width: 900px;
+    margin: auto;
+    min-height: 80vh;
+    background: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    & > div{
+        width: 50%;
+        &.control_output_side{
+            width: 49%;
+        }
+    }
+    .control_input_side{
+        .form_group{
+            padding-bottom: 1.5rem;
+            & > *{
+                display: block;
+            }
+            label{
+                font-size: 14px;
+                padding-bottom: 4px;
+            }
+            input:not([type="color"]){
+                border: 1px solid rgba($color: #000000, $alpha: .2);
+                outline: none;
+                padding: .7rem .4rem;
+                transition: .1s;
+                border-radius: 3px;
+                &:focus{
+                     border: 1px solid rgba($color: #32A2FF, $alpha: 1);
+                }
+                &::placeholder{
+                    color: rgba($color: #000000, $alpha: .1)
+                }
+            }
+            p{
+                margin: 0;
+                font-size: 13px;
+                color: $shadow_color;
+                margin-top: .5rem;
+            }
+            &.form_group_full{
+                input:not(.checkbox_allow):not([type="color"]){
+                    width: 100%;
+                }
+            }
+        }
+        .form_group_row{
+            display: flex;
+            flex-flow: row wrap;
+            position: relative;
+            & > div{
+                flex-basis: 50%;
+                padding-right: 1rem;
+            }
+            input[type=color]{
+                position: absolute;
+                margin-top: 8px;
+                margin-left: 5px;
+                & ~ input{
+                padding-left: 3.5rem;
+                }
+            }
+            input[type=number],.w_75{
+                display: inline-block!important;
+                width: 75%!important;
+                & ~ span{
+                    display: inline-block!important;
+                    color: $shadow_color;
+                }
+            }
+        }
+    }
+    .control_output_side{
+        padding: 0 1.5rem;
+        .button_output_wrapper{
+            height: 200px;
+            background: #F2F2F2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba($color: #000000, $alpha: .3);
+        }
+        .output_code{
+            height: 350px;
+            background: #FBF9E6;
+            
+            margin-top: 1.5rem;
+            box-shadow: 0 1px 2px rgba($color: #000000, $alpha: .3);
+            padding: 1rem;
+            position: relative;
+            .btn_copy{
+                position: absolute;
+                left: 4px;
+                bottom: 4px;
+                border: none;
+                outline: none;
+                background: #fff;
+                color: #222;
+                padding: .3rem .5rem;
+                box-shadow: 0 1px 3px $shadow_color;
+                border-radius: 7px;
+                cursor: pointer;
+                &:active{
+                background: #eee;
+                box-shadow: 0 1px 6px $shadow_color;
+                }
+            }
+            code{
+                overflow: auto;
+                height: 100%;
+                display: block;
+                &.selection{
+                    -webkit-touch-callout: all; /* iOS Safari */
+    -webkit-user-select: all; /* Safari */
+    -khtml-user-select: all; /* Konqueror HTML */
+    -moz-user-select: all; /* Firefox */
+    -ms-user-select: all; /* Internet Explorer/Edge */
+    user-select: all; /* Chrome and Opera */
+                }
+            }
+        }
+    }
+}
