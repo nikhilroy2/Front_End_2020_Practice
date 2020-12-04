@@ -52,10 +52,12 @@ const num = [3,4,5,2,32,2,3];
 
 let Obj = {
     value: 0,
-    result: function(){
-        setInterval(()=> {
-           this.value++;
-           console.log(this.value)
+    result: ()=>{
+        var own = Obj.result.bind(this)
+        setTimeout(function() {
+            own.value++
+           console.log(own.value)
         },1000)
     }
 }
+Obj.result()
