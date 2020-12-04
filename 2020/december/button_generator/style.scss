@@ -8,6 +8,7 @@ body{
     background: #111324;
     font-family: sans-serif;
 }
+
 .button_generator_wrapper{
     width: 900px;
     margin: auto;
@@ -16,10 +17,26 @@ body{
     padding: 2rem;
     display: flex;
     flex-flow: row wrap;
-    & > div{
+    & > div:not(.sample_button_wrapper){
         width: 50%;
         &.control_output_side{
             width: 49%;
+        }
+    }
+    .sample_button_wrapper{
+        width: 100%;
+        padding-bottom: 2rem;
+        h2{
+            text-align: center;
+        }
+        .button_wrapper{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            span{
+                cursor: pointer;
+            }
         }
     }
     .control_input_side{

@@ -114,8 +114,17 @@ function Output_code(
     btn_borderRadius = $(change_Obj[7].attr).val(),
     btn_url = $(change_Obj[8].attr).val()
 ) {
-    
-    let output_code =
+
+    let output_code = '';
+
+    if(btn_text === 'sample'){
+        output_code = 
+        `
+        <a href="${btn_url}" style='${btn_bgColor}'> ${btn_img}  </a>
+        `;
+
+    } else{
+        output_code =
         `
         <a href="${btn_url}" style='
         background-image: url(${btn_img});
@@ -133,8 +142,7 @@ function Output_code(
         
         '> ${btn_text}  </a>
         `;
-
-
+    }
     $('.output_code code').text(output_code);
     $('.button_output_wrapper').html(output_code)
 
@@ -202,4 +210,16 @@ function clickColor(val, check){
     $(`#${check}`).prop('checked', true);
     $(`[data-name=${check}]`).val($(val).val());
     Output_code()
+}
+
+// ...... smaple button... 
+
+function SampleBtn(val){
+    // let output_code =
+    //     `
+    //     <a href="" style=''> ${val.innerHTML}  </a>
+    //     `;
+
+    // $('.output_code code').text(output_code)
+    Output_code('sample', val.innerHTML, val.getAttribute('style'))
 }

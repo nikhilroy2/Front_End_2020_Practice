@@ -25,12 +25,40 @@ body {
           flex-flow: row wrap;
 }
 
-.button_generator_wrapper > div {
+.button_generator_wrapper > div:not(.sample_button_wrapper) {
   width: 50%;
 }
 
-.button_generator_wrapper > div.control_output_side {
+.button_generator_wrapper > div:not(.sample_button_wrapper).control_output_side {
   width: 49%;
+}
+
+.button_generator_wrapper .sample_button_wrapper {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.button_generator_wrapper .sample_button_wrapper h2 {
+  text-align: center;
+}
+
+.button_generator_wrapper .sample_button_wrapper .button_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button_generator_wrapper .sample_button_wrapper .button_wrapper span {
+  cursor: pointer;
 }
 
 .button_generator_wrapper .control_input_side .form_group {
