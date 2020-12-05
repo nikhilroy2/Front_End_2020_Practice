@@ -223,3 +223,12 @@ function SampleBtn(val){
     // $('.output_code code').text(output_code)
     Output_code('sample', val.innerHTML, val.getAttribute('style'))
 }
+
+
+// hidden section working
+
+$('[data-toggling="content_body"]').hide();
+function showContentBody(){
+$('[data-toggling="content_body"]').show();
+
+}
