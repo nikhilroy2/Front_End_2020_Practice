@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptates laboriosam nobis, aspernatur accusantium unde expedita quo ratione hic ullam sint officiis tenetur numquam, voluptatum eveniet, vero et minus recusandae eligendi qui. Omnis inventore et nisi. Exercitationem quasi veritatis expedita ea, tempore sapiente totam recusandae dicta sequi cum! Esse exercitationem natus dolores non unde adipisci fugit earum deleniti laborum itaque aut reiciendis, quod facere ad magnam sit modi magni voluptatum velit quidem odit. Fugit tempore eum ipsam porro debitis, nihil fuga earum corporis impedit totam ad. Distinctio totam, possimus facilis perspiciatis quisquam quis necessitatibus architecto id reprehenderit consequuntur maxime eveniet esse corrupti doloribus blanditiis placeat soluta consequatur delectus fugit at nihil fugiat. Distinctio magni delectus totam non. Consectetur eos consequatur porro optio vel aliquid voluptas aperiam, doloremque tempora quod expedita commodi molestiae laborum qui accusantium! Facere corporis quasi sequi beatae corrupti incidunt aliquid accusantium voluptatem perferendis labore tenetur quibusdam, expedita minima impedit similique at iusto omnis dignissimos quaerat. Obcaecati porro eligendi a optio dolor quasi, suscipit in vitae possimus quas. Ex animi in voluptatum perferendis veniam voluptatem deserunt aut doloremque cupiditate explicabo alias quasi voluptas recusandae unde sunt eos, omnis dolores quibusdam qui veritatis ut modi nemo quo facere? Natus sint repellat nam alias totam ratione officiis. Aspernatur, error? Praesentium odit explicabo debitis iure adipisci, culpa voluptatum rem rerum vitae corporis, repellendus voluptate quaerat fuga modi perferendis harum vel quis, odio soluta qui doloremque molestias libero laboriosam assumenda. Repudiandae doloribus suscipit soluta quam ullam, numquam similique nostrum! Eum cum enim, necessitatibus, provident, perspiciatis adipisci molestias tenetur id dolores vitae dolorum earum maxime nesciunt dolore harum reprehenderit omnis expedita quam beatae velit placeat quasi incidunt. Consequuntur eveniet mollitia asperiores corporis saepe sed unde aspernatur reprehenderit nam veniam. Nemo quasi alias quae tempora cum odio, sunt est reprehenderit id aperiam quis iusto nam corrupti laborum in minus obcaecati consectetur dignissimos molestias non. Ipsa totam voluptates dignissimos optio? Error cum odit quia, excepturi vel aliquid labore dolores eveniet incidunt consectetur molestias! Esse iusto obcaecati porro voluptas libero veritatis nulla cum totam itaque labore debitis non eligendi vero, dolore, sapiente aspernatur! Excepturi quos itaque in assumenda sed minima quo, sunt quod illo dolores aut asperiores expedita velit blanditiis corporis veritatis nesciunt, necessitatibus, architecto nam doloremque voluptatibus? Provident unde modi, eius corrupti atque natus iusto impedit, ad labore ab asperiores illo nam doloribus aperiam culpa voluptatibus quisquam dolore. Ducimus quas mollitia harum ea. Non, corporis tempora magnam adipisci repellat magni dolore tempore incidunt necessitatibus commodi beatae sapiente, inventore, cumque perferendis unde? Veniam possimus voluptatibus quia quos, nesciunt dolores, labore vero ipsum ut laboriosam error officia recusandae qui tenetur adipisci architecto perspiciatis obcaecati repellat autem? Omnis harum deleniti, facere voluptates blanditiis hic laudantium necessitatibus cum nihil ratione repellendus culpa quod repudiandae repellat, praesentium tempora. Libero et fugiat reiciendis provident voluptatibus earum voluptatem ratione debitis optio iusto nesciunt consequatur, culpa magni ipsam enim veniam modi obcaecati quo illum eveniet porro facilis! Commodi fugit inventore illum quod deserunt totam dolore ducimus, repellendus molestias ut enim repudiandae dicta nesciunt?</p>
+    <button>Click</button>
+
+    <script>
+        function selectHTML(){
+            try{
+                if(window.ActiveXObject){
+                    var c = document.selection.createRange();
+                    return c.htmlText;
+
+                } 
+                var nNd = document.createElement('span')
+                var w = getSelection().getRangeAt(0);
+                w.surroundContents(nNd);
+                return nNd.innerHTML;
+            } catch(e){
+                if(window.ActiveXObject){
+                    return document.selection.createRange();
+                } else{
+                    return getSelection();
+                }
+            }
+        }
+
+        document.querySelector('button').onclick = ()=> {
+            var mytext = selectHTML();
+            console.log(mytext);
+            document.querySelector('span').setAttribute('style', 'color: red')
+        }
+    </script>
+</body>
+</html>
