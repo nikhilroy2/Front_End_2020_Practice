@@ -1,9 +1,27 @@
-function textSelection(){
-    let newInput = document.createElement('input');
-    newInput.setAttribute('value', window.getSelection());
-    console.log(newInput.value)
-    document.body.appendChild(newInput);
-    newInput.remove()
-
+function selectHTML() {
+    try {
+        if (window.ActiveXObject) {
+            var c = document.selection.createRange();
+            return c.htmlText;
+        }
+    
+        var nNd = document.createElement("span");
+        var w = getSelection().getRangeAt(0);
+        w.surroundContents(nNd);
+        return nNd.innerHTML;
+    } catch (e) {
+        if (window.ActiveXObject) {
+            return document.selection.createRange();
+        } else {
+            return getSelection();
+        }
+    }
 }
-document.onmouseup = textSelection
+
+$(function() {
+    $('#changeColor').click( function() {
+        var mytext = selectHTML();
+      console.log(mytext)
+        $('span').css({"color":"red"});
+    });
+});
