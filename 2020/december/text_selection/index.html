@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem;
+
+        }
+
+        .palette_wrapper {
+            position: fixed;
+            width: 300px;
+            height: 100vh;
+        }
+
+        .select_input {
+            padding: .5rem 1rem;
+
+        }
+
+        .wrapper {
+            padding-left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="palette_wrapper">
+        <select name="" id="" class="select_input" oninput="textInput(this, 'color')">
+            <option value="" selected disabled>Choose color</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+            <option value="orange">orange</option>
+        </select>
+
+        <select name="" id="" class="select_input" oninput="textInput(this, 'font_size')">
+            <option value="" selected disabled>Font Size</option>
+            <option value="10px">10px</option>
+            <option value="20px">20px</option>
+            <option value="30px">30px</option>
+            <option value="40px">40px</option>
+            <option value="50px">50px</option>
+        </select>
+        <select name="" id="" class="select_input" oninput="textInput(this, 'font_family')">
+            <option value="" selected disabled>Font Family</option>
+            <option value="sans-serif">sans-serif</option>
+            <option value="verdana">verdana</option>
+            <option value="arial">arial</option>
+            <option value="cursive">cursive</option>
+            <option value="serif">serif</option>
+        </select>
+        <select name="" id="" class="select_input" oninput="textInput(this, 'remove_text')">
+            <option value="" selected disabled>Remove Text</option>
+            <option value="Yes">Yes</option>
+        </select>
+
+    </div>
+    <div class="wrapper">
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, sequi aut! Temporibus adipisci, eveniet
+            blanditiis
+            sunt accusantium possimus qui harum error assumenda facilis veritatis debitis officiis ipsam. Consectetur
+            mollitia obcaecati dolorem sapiente corrupti sit aliquam suscipit tempora culpa iusto? Doloremque illo modi
+            culpa distinctio, dolores ad eum totam delectus vero id sequi officiis excepturi est nesciunt porro.
+            Explicabo
+            eaque voluptas placeat vel ad itaque ipsum, aspernatur mollitia a delectus. Sapiente, sunt. Quis amet
+            excepturi
+            asperiores, consequatur, nulla pariatur nisi corrupti ducimus necessitatibus ullam esse repudiandae nostrum,
+            labore laboriosam beatae ipsam officia commodi similique expedita quos. Ipsa nesciunt vero quasi, quos
+            repellendus provident obcaecati fugiat reprehenderit quia ratione qui iusto, perspiciatis eos quae eaque.
+            Dolorem aliquam soluta molestias tempore! Voluptatum delectus, iure fuga laboriosam esse atque itaque
+            distinctio
+            nobis facere? Unde, cupiditate, dolorum dolor praesentium facere temporibus ullam fugiat maxime libero nihil
+            laudantium repellat ut quia, aspernatur modi perferendis. Quod ullam dicta temporibus, corporis consequatur
+            in
+            delectus quidem itaque, vero alias sunt non perferendis nobis cupiditate eligendi suscipit accusamus fugiat
+            maiores beatae odio laboriosam molestiae quisquam natus. Amet quaerat temporibus at culpa id! Distinctio,
+            dolor
+            exercitationem. Dolorem repellat corporis dolorum quas itaque asperiores, possimus optio veniam amet neque
+            placeat eligendi? Dolor.</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi expedita nam molestiae voluptas rerum dicta
+            a
+            nihil! Ipsa, cupiditate. Fugit exercitationem eius quibusdam expedita hic eos deserunt sit, dolor
+            accusantium
+            nihil voluptas non beatae inventore illo maiores libero perferendis incidunt iusto asperiores! Repellendus
+            tempora et velit, quia expedita blanditiis cum, laborum, sequi ratione libero pariatur veritatis saepe nemo
+            totam aliquam magni voluptas assumenda animi ducimus ut aspernatur consequuntur! Facere laboriosam nihil
+            iure
+            dicta doloribus corporis tempora deserunt in suscipit eius ipsa, aliquid blanditiis maiores omnis ducimus
+            illo
+            officia. Perferendis, aperiam expedita vitae ratione dignissimos impedit temporibus. Adipisci molestias
+            consectetur ipsam dolorem, distinctio est aliquid mollitia nam, veniam enim suscipit eos eaque ipsum numquam
+            dolores harum! Necessitatibus sequi incidunt dicta facilis dolores ratione fuga soluta autem hic ipsa
+            accusantium et veritatis repudiandae perferendis quidem tenetur cum, aspernatur laboriosam magnam, deleniti
+            excepturi optio praesentium ea? Perspiciatis obcaecati ex dolorum nam blanditiis dolor illum in nisi beatae
+            voluptatem libero magnam incidunt, doloribus aliquam! Maxime consectetur ratione quidem dolores error rem
+            dicta,
+            tempora repellendus inventore perferendis velit ab corporis quibusdam ea quo obcaecati dolor corrupti autem
+            animi ut. Ratione corrupti voluptas, soluta nam vitae cupiditate voluptate, nihil rerum blanditiis,
+            veritatis
+            odit debitis maiores tempora!</h2>
+        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum ea obcaecati, iure repellendus numquam
+            perferendis rerum velit delectus consequuntur fugiat, reprehenderit aperiam in dignissimos temporibus unde
+            alias
+            sed! Consectetur incidunt ratione optio dicta laboriosam facere rem, dolorum explicabo dolor exercitationem
+            sit
+            in voluptatem officiis fugit animi quos ex accusamus qui quisquam impedit, vel sapiente beatae. Qui magni
+            ducimus eveniet? Dolore, sunt beatae adipisci nisi ullam deleniti ratione, est eligendi unde laboriosam qui
+            harum? Impedit vitae praesentium corrupti reiciendis quod nobis corporis, temporibus repudiandae asperiores
+            nihil odit, hic ut veritatis aspernatur sint quidem, eaque expedita inventore tempora quia recusandae nulla
+            vero
+            ex. Sapiente quod quos ipsam cum fuga laborum fugit eligendi voluptates a, vero exercitationem sit totam?
+            Quia
+            hic nam accusamus vel. Ipsum, a magnam atque repellendus corporis dolorum sunt nesciunt nemo quidem velit
+            dolores voluptate porro illum sapiente quam est eaque assumenda! Quae, debitis illo. Quo minima repellat,
+            reprehenderit modi animi deserunt consectetur asperiores placeat quae laborum voluptate quas tempore? Quis
+            placeat molestiae repellendus laudantium, magni accusantium ab. Molestias eos dolores exercitationem aperiam
+            dolorem eum sed repudiandae nesciunt ipsa! Ut nulla iure beatae pariatur, voluptas tenetur officia itaque.
+            Repellendus, ea reprehenderit ipsa odit quasi quas ad incidunt doloremque asperiores ex!</h3>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem inventore explicabo, enim minus
+            ducimus quos natus, pariatur, accusantium id doloremque adipisci! Quo, maiores. Consequatur sunt beatae quia
+            dolorum deserunt? Aliquam nobis animi amet recusandae, veniam enim aliquid aperiam consequatur eos, alias
+            optio
+            dolorum. Dicta maxime, voluptas, soluta nam aliquam harum, autem ratione cum perferendis alias vitae minima
+            necessitatibus quisquam. Saepe sint quam earum maxime? Quibusdam dignissimos officiis earum veniam nemo ut,
+            sit
+            reiciendis ad modi fugiat accusamus fugit consequuntur. Dolor hic nemo dolore doloribus minima reiciendis
+            praesentium totam debitis vero harum sit molestias sint nihil aliquid incidunt, cupiditate error
+            consequuntur
+            deleniti accusamus cum quaerat aperiam tenetur! Itaque rem natus consequuntur earum alias dignissimos
+            voluptatum
+            doloribus aliquam? Harum repellat sapiente eius dolores itaque odit labore voluptatem, quo distinctio, ad
+            voluptates accusantium quaerat doloremque. Illo voluptate eos minima aliquam eligendi odit vitae eius magnam
+            labore consequatur perspiciatis corrupti, incidunt atque. Asperiores voluptatem nostrum dolor tenetur cum
+            error
+            impedit unde accusamus atque porro molestiae inventore repellat repellendus aliquam, dolorem esse dicta,
+            nihil
+            provident fuga voluptas voluptatibus quia? Culpa incidunt voluptatibus officiis? Excepturi quam dolore
+            fugiat
+            quibusdam architecto alias, sequi distinctio provident qui dignissimos commodi, obcaecati cum aliquam fugit
+            assumenda error iure id!</h4>
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quae perspiciatis nemo suscipit quis
+            impedit
+            eveniet aliquid beatae sunt omnis. Quam incidunt nihil consequuntur repellat doloribus architecto sequi
+            laboriosam. Pariatur odio quos quo eum illo incidunt. Sunt iste incidunt dolorem ipsa possimus qui quis ad
+            eaque
+            sint pariatur, rerum unde porro laboriosam, eveniet corporis exercitationem in illum iusto voluptatum. Quae
+            quis, amet repellat animi reprehenderit, reiciendis, iste blanditiis dolore corrupti voluptates minima!
+            Aspernatur itaque, eum, doloribus nam numquam illum atque natus ipsam eligendi sit obcaecati repellat
+            asperiores
+            dolorum maiores officiis dignissimos magnam architecto doloremque. Voluptatem quis ut tempora nemo tempore
+            dolore, magni corporis quam dolorum obcaecati voluptates optio repudiandae rerum! Tenetur magnam adipisci a
+            quo
+            ut natus accusamus, aperiam perferendis! Expedita illum totam veritatis rem dicta atque, quam laudantium
+            vitae
+            omnis repellendus eaque non reiciendis harum dolore repellat sit velit odio, hic, corrupti excepturi quae
+            porro.
+            At culpa, cupiditate numquam alias eveniet eligendi iusto facilis debitis dicta dolorem ullam cum quasi
+            recusandae mollitia, facere ut ea quaerat ex nesciunt neque natus nobis? Praesentium soluta illo voluptatem
+            hic
+            ut eos fuga minus assumenda fugit quis nesciunt dolorum ratione reprehenderit in est atque aperiam sit nisi
+            distinctio qui dolores numquam, similique et.</h5>
+        <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa aperiam voluptatum deleniti vel dolorem
+            cupiditate rem possimus pariatur nihil fugit amet inventore, placeat veritatis blanditiis, modi, numquam
+            soluta
+            cumque accusamus? Aut nemo doloribus earum, necessitatibus expedita doloremque possimus, sint tempore sunt
+            exercitationem consequatur magni vitae impedit neque quos minima consectetur ullam vel itaque sit. Veritatis
+            quos aliquam tempora praesentium. Nostrum quaerat molestias repellat, consectetur laudantium odit et culpa
+            corporis ducimus quas est ab expedita accusantium esse sequi voluptates. Minima iste hic ut, quos quo iure,
+            magnam sapiente delectus inventore dolores labore dolor explicabo, nobis dignissimos ab! Odio beatae error
+            vel
+            sunt. Fuga culpa odit cupiditate porro error quis ab ut perferendis velit aperiam ipsum, cumque eveniet
+            libero
+            obcaecati necessitatibus iste consequuntur repellat et provident quos vitae? Eaque, aperiam numquam
+            molestias
+            doloribus est quod dolor, itaque dolorem reprehenderit illum tempore id modi! Laudantium incidunt accusamus
+            libero sapiente illum voluptas provident vero, repellat fugiat illo obcaecati doloribus dicta id optio.
+            Consectetur nobis, incidunt mollitia omnis qui ratione asperiores, sunt iure necessitatibus deleniti modi a
+            voluptate soluta? Dolor aliquid maiores, voluptatibus, fugiat hic aut nisi laborum ex sed ratione numquam
+            quo
+            laudantium, unde esse dolorem error repellat nulla repudiandae quasi quidem! Perferendis, dolores.</h6>
+
+        <textarea name="" id="" cols="30" rows="10">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere fugiat autem saepe reiciendis similique recusandae, hic tenetur id debitis cupiditate, quas minus optio nobis maxime ratione accusantium voluptate veritatis sint sequi maiores quam deleniti. Aut officiis incidunt pariatur laudantium, cupiditate labore a quia, molestias impedit necessitatibus blanditiis obcaecati? Voluptates, qui.
+            </textarea>
+        <button>
+            Click Me
+        </button>
+    </div>
+    <script>
+        let count = 0;
+        function selectHTML() {
+            count++;
+            try {
+                if (window.ActiveXObject) {
+                    var c = document.selection.createRange();
+                    return c.htmlText
+                }
+                var newSpan = document.createElement('span');
+                newSpan.id = `span_${count}`;
+
+                var w = getSelection().getRangeAt(0);
+                w.surroundContents(newSpan);
+                return newSpan.textContent
+            } catch (e) {
+                if (window.ActiveXObject) {
+                    return document.selection.createRange()
+                } else {
+                    return getSelection()
+                }
+            }
+        }
+
+        function textInput(val, name) {
+            console.log(selectHTML())
+            let newInput = document.createElement('input');
+            newInput.setAttribute('value', selectHTML());
+            document.body.appendChild(newInput);
+            newInput.select();
+            document.execCommand('copy');
+            newInput.remove()
+
+            let span = document.querySelector(`#span_${count}`);
+            if (span != undefined) {
+                if (name === 'color') {
+                    if (span.parentElement.nodeName === 'SPAN') {
+                        span.parentElement.style.color = '';
+                    }
+                    span.style.color = val.value;
+                } else if (name === 'font_size') {
+                    if (span.parentElement.nodeName === 'SPAN') {
+                        span.parentElement.style.fontSize = '';
+                    }
+                    span.style.fontSize = val.value;
+
+                } else if(name === 'font_family'){
+                    if (span.parentElement.nodeName === 'SPAN') {
+                        span.parentElement.style.fontFamily = '';
+                    }
+                    span.style.fontFamily = val.value;
+                } else if(name === 'remove_text'){
+                    span.remove();
+                }
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
