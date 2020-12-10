@@ -19,6 +19,6 @@
 
 const name = ["Nikhil", "Sonchoy", "Shanto"]
 
-const result = name.map(v=> ({nam: v}))
+const result = name.map((v,i,j,k)=> j)
 
 console.log(result)

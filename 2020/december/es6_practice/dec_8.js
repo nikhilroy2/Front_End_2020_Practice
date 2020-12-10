@@ -1,0 +1,5 @@
+// Destructuring Asignment.
+
+var list = [1,2,3]
+var [a, , b] = list
+console.log([b,a]= [a,b])
